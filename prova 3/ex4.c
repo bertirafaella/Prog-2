@@ -14,3 +14,4 @@ typedef struct {
 int main(){
     printf("algo");
 }
+
