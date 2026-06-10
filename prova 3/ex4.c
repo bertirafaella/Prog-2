@@ -8,12 +8,14 @@ typedef struct {
 } produto;
 
 int main(){
+
     FILE *entrada, *saida;
     entrada= fopen("entrada.txt", "rt");
     if (entrada==NULL){
         printf("erro");
         return 1;
     }
+
     int m, p, qnt;
     float total=0.0;
 
@@ -26,7 +28,6 @@ int main(){
         fscanf(entrada, "%s %f", dados[i].nome, &dados[i].preco);
     }
     fscanf(entrada, "%d", &p);
-
     char nomeProduto[51];
 
     for(int j=0;j<p;j++){
@@ -39,9 +40,11 @@ int main(){
             }
         }
     }
+
     fclose(entrada);
     saida=fopen("saida.txt", "wt");
     fprintf(saida, "R$%.2f", total);
     fclose(saida);
-return 0;
+    
+    return 0;
 }
