@@ -35,7 +35,7 @@ int main (){
 
     funcionarios f[n];
     for(int i=0;i<n;i++){
-         fscanf(arq, "%s", f[i].cpf);
+        fscanf(arq, "%s", f[i].cpf);
         fscanf(arq, " %[^\n]", f[i].nome);
         fscanf(arq, "%f", &f[i].salario);
         fscanf(arq, "%[^\n]", f[i].departamento);

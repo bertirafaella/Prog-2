@@ -21,11 +21,15 @@ if (arq==NULL){
 
 while (fgets(nome, 100, arq)){
 
-    fscanf(arq, "%f %f %f", &n1, &n2, &n3);
+    if (fscanf(arq, "%f %f %f", &n1, &n2, &n3) != 3){
+        printf("Erro ao ler notas.\n");
+        break;
+    }
+
     media= Cmedia(n1,n2,n3);
 
     printf("Nome: %s", nome);
-    printf("Notas: %.1f %.1f %.1f\n", n1, n2, n3);
+    printf("Notas: %.2f %.2f %.2f\n", n1, n2, n3);
     printf("Media: %.2f\n\n", media);
 
     if(media>=5){
