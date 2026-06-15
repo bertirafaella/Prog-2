@@ -12,7 +12,7 @@ int main (){
         return 1;
     }
 
-    while (fread(&valor, sizeof(int), 1, arq)>0){
+    while (fread(&valor, sizeof(float), 1, arq)>0){
         media+=valor;
         cont++;
     }
@@ -21,7 +21,7 @@ int main (){
     rewind(arq);
 
     float menor=0.0;
-    while (fread(&valor, sizeof(int), 1, arq)>0){
+    while (fread(&valor, sizeof(float), 1, arq)>0){
         if (valor>=media){
             menor=valor;
             break;
