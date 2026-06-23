@@ -9,5 +9,5 @@ unsigned int mudar(unsigned int num){
     //inverter bit 9
     num^=(1<<9);
     return num;
-    
+    //teste
 }
