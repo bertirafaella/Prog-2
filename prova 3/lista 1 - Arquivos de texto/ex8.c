@@ -41,5 +41,21 @@ void merge_arquivos(char arquivo1[50], char arquivo2[50], char final[50]){
     fclose(arq2);
     fclose(saida);
 }
+int main() {
+    char arq1[50], arq2[50], saida[50];
 
-//acabei nao testando pois estava atrasada
+    printf("Digite o primeiro arquivo: ");
+    scanf("%s", arq1);
+
+    printf("Digite o segundo arquivo: ");
+    scanf("%s", arq2);
+
+    printf("Digite o arquivo de saida: ");
+    scanf("%s", saida);
+
+    merge_arquivos(arq1, arq2, saida);
+
+    printf("Merge concluido! Arquivo gerado: %s\n", saida);
+
+    return 0;
+}

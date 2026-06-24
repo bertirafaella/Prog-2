@@ -24,3 +24,24 @@ float media (char mat[50], char nome_arquivo[50]){
     fclose(arq);
     return resultado;
 }
+int main() {
+    char matricula[50];
+    char arquivo[50];
+    float resultado;
+
+    printf("Digite o nome do arquivo: ");
+    scanf("%s", arquivo);
+
+    printf("Digite a matricula: ");
+    scanf("%s", matricula);
+
+    resultado = media(matricula, arquivo);
+
+    if (resultado == -1.0) {
+        printf("Matricula nao encontrada.\n");
+    } else {
+        printf("Media da matricula %s = %.2f\n", matricula, resultado);
+    }
+
+    return 0;
+}
