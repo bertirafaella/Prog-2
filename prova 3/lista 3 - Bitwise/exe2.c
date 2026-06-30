@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-unsigned int mudar(unsigned int num){
-
+unsigned short int mudar(unsigned short int num){
     //zerar bit 5
     num &=~(1 << 5);
     //ligar bit 8

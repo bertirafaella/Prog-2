@@ -19,18 +19,14 @@ if (arq==NULL){
     return 1;
 }
 
-while (fgets(nome, 100, arq)){
+while (fgets(nome, 100, arq) != NULL){
 
     if (fscanf(arq, "%f %f %f", &n1, &n2, &n3) != 3){
         printf("Erro ao ler notas.\n");
         break;
     }
 
-    media= Cmedia(n1,n2,n3);
-
-    printf("Nome: %s", nome);
-    printf("Notas: %.2f %.2f %.2f\n", n1, n2, n3);
-    printf("Media: %.2f\n\n", media);
+    media=Cmedia(n1,n2,n3);
 
     if(media>=5){
         aprov++;
@@ -38,8 +34,9 @@ while (fgets(nome, 100, arq)){
     else{
         reprov++;
     }
-    fgetc(arq);
+    fgetc(arq); //para ler o "\n"
 }
+
 printf("Aprovados: %d\n", aprov);
 printf("Reprovados: %d\n", reprov);
 
