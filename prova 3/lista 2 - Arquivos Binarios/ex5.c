@@ -21,9 +21,9 @@ void ordenar(DADOS aluno[], float media[], int num){
                 media[i]=media[j];
                 media[j]=aux;
 
-                aluno auxA=aluno[i]; // troca aluno
+                DADOS aux1=aluno[i]; // troca aluno
                 aluno[i]=aluno[j];
-                aluno[j]=auxA;
+                aluno[j]=aux1;
             }
         }
     }
